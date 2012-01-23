@@ -13,12 +13,32 @@
 			}
 		</style>
 		<link rel="stylesheet" href="bootstrap.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		  <script src="js/bootstrap-modal.js"></script>
+		  <script>
+		    $(document).ready(function () {
+		      domModal = $('#modal-from-dom');
+
+		      $('#btnPrimary').live('click', function(){
+		        alert('btnPrimary clicked!');
+		        domModal.modal('hide');
+		      });
+
+		      $('#btnSecondary').live('click', function(){
+		        alert('btnSecondary clicked!');
+		        domModal.modal('hide');
+		      });
+
+		    /*Removes the close 'x'
+		      $('.close', $('#modal-from-dom')).remove();
+		    }); */
+		  </script>
 	</head>
 	<body>
 		<div class="topbar">
 			<div class="fill">
 				<div class="container">
-					<a class="brand" href="#">Lab 2</a>
+					<a class="brand" href="index.html">CSCI 344: Lab 2</a>
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">About</a></li>
@@ -26,7 +46,7 @@
 					</ul>
 					<form action="#" class="pull-right">
 						<input class="input-small" type="text" placeholder="Search" />
-						<button class="btn" type="submit">Search</button>
+						<button class="btn" type="submit">Go</button>
 					</form>
 				</div>
 			</div>
@@ -43,7 +63,8 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non sagittis sapien. Mauris varius venenatis euismod. Suspendisse potenti. Vivamus fringilla eros vitae metus tempor placerat. Integer adipiscing, nunc non auctor dignissim, metus augue suscipit massa, ac eleifend velit ante quis purus. Vestibulum facilisis neque eu massa commodo sed mattis est aliquet. Morbi vel tortor vel quam blandit suscipit eu eget urna. Integer pretium quam vitae lacus scelerisque imperdiet. Nam luctus facilisis ipsum, quis vehicula metus faucibus a.</p>
 					</div>
 					<div class="span6">
-						<p><h2>Secondary</h2></p>
+						<h2>Secondary</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non sagittis sapien. Mauris varius venenatis euismod. Suspendisse potenti.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -52,27 +73,110 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="span3">
+					<div class="span3" style="text-align:center;">
 						<img src="images/andy.jpg" alt="Dr. Alissandro Castillo" />
+						<br />
+						<button data-controls-modal="modal-andy" data-backdrop="static" class="btn primary">Read More...</button>
 					</div>
-					<div class="span3">
+					<div class="span3" style="text-align:center;">
 						<img src="images/john.jpg" alt="John Mairs" />
+						<br />
+						<button data-controls-modal="modal-john" data-backdrop="static" class="btn primary">Read More...</button>
 					</div>
-					<div class="span3">
+					<div class="span3" style="text-align:center;">
 						<img src="images/lindsey.jpg" alt="Lindsey Miller" />
+						<br />
+						<button data-controls-modal="modal-lindsey" data-backdrop="static" class="btn primary">Read More...</button>
 					</div>
-					<div class="span3">
+					<div class="span3" style="text-align:center;">
 						<img src="images/rita.jpg" alt="Rita Brodland" />
+						<br />
+						<button data-controls-modal="modal-rita" data-backdrop="static" class="btn primary">Read More...</button>
 					</div>
-					<div class="span3">
+					<div class="span3" style="text-align:center;">
 						<img src="images/sarah.jpg" alt="Sarah Stein" />
+						<br />
+						<button data-controls-modal="modal-sarah" data-backdrop="static" class="btn primary">Read More...</button>
 					</div>
 			</div>
 			
 			<footer>
-				<p>&copy; 2012, John / Avi</p>
+				<p>&copy; 2012, Avi Goldberg, John Mairs</p>
 				<p>Images stolen from <a href="http://www.mdlaserstudio.com">M.D. Laser Studio</a></p>
 			</footer>
-		</div>	
+		</div>
+		
+<!-- The Modal Dialogs  -->
+	<!-- Andy -->
+		<div id="modal-andy" class="modal hide fade">
+			<div class="modal-header">
+				<h1>Dr. Alissandro Castillo <small>Medical Director</small></h1>
+			</div>
+			<div class="modal-body">
+				<p style="float:right;"><img src="images/andy.jpg" /></p>
+				<p>Dr. Andy Castillo is the owner and Medical Director of <a href="http://www.mdlaserstudio.com">M.D. Laser Studio</a>. He is a family physician with extensive dermatological and surgical training. His education includes a B.S. degree in Zoology from the University of Maryland, an M.D. degree from Wake Forest University, and a Masters in Business from Duke University. Dr. Castillo completed an internship in general surgery at Walter Reed Army Medical Center while serving in the United States Army as a flight surgeon and in various other capacities. During that time he also successfully completed a plastic and reconstructive surgery research fellowship at prestigious Johns Hopkins. Following his military service, he finished a three-year residency in family medicine and established a successful private practice in Mooresville, NC. Dr. Castillo opened M.D. Laser Studio in 2001 as an adjunct to his family practice, but he quickly grew the business and helped it evolve to a singular entity.</p>
+				<p>A Fellow of the American Society for Laser Medicine and Surgery, Dr. Castillo has participated in the Constitution &amp; Bylaws Committee, Audit Committee, and Strategic Planning Committee. With his extensive expertise on such a wide variety of equipment, he is often called upon to train others in laser procedures. He has served as a Luminary for Laserscope/Iridex, is a Gold-Level Provider of Botox for Allergan, and has trained and spoken on behalf of Medicis, the provider of Restylane, Perlane, and Dysport.</p>
+				<p>Dr. Castillo and his wife, Dr. Rebecca Appleton, are raising six children in the Lake Norman area, approximately 30 miles north of Charlotte, NC. In addition to M.D. Laser Studio, he and his wife own three <a href="http://www.passporthealthnc.com">Passport Health</a> locations, where he also serves as Medical Director.</p>
+			</div>
+			<div class="modal-footer">
+				<button href="#" class="btn primary exit">Close</button>
+			</div>
+		</div>
+
+	<!-- John -->
+		<div id="modal-john" class="modal hide fade">
+			<div class="modal-header">
+				<h1>John Mairs <small>IT Specialist &amp; Web Admin</small></h1>
+			</div>
+			<div class="modal-body">
+				<p style="float:right;"><img src="images/john.jpg" /></p>
+				<p>John joined M.D. Laser Studio in 2006 providing technical support on location. Very soon he was helping manage our website, eventually taking over hosting and web administration in addition to managing all computer hardware and software. At a very early age, John discovered his passion for technology and has been on a path to a career in that industry ever since. John was one of the early participants in the Collaborative College for Technology and Leadership, a five-year early college high school program. He began working with MDLS as a freshman, and the following year started teaching video production classes to gifted students at Iredell-Statesville Schools summer camps. Within a few years, he was offering computer services through <a href="http://www.johnmairs.com">JMTech</a> and added Passport Health to his list of employers. Now attending the University of North Carolina at Asheville, John still manages to juggle his work responsibilities despite being a full-time student studying a mix of computer science and new media.</p>
+			</div>
+			<div class="modal-footer">
+				<button href="#" class="btn primary exit">Close</button>
+			</div>
+		</div>
+		
+		<!-- Lindsey -->
+			<div id="modal-lindsey" class="modal hide fade">
+				<div class="modal-header">
+					<h1>Lindsey Miller <small>Treatment Coordinator</small></h1>
+				</div>
+				<div class="modal-body">
+					<p style="float:right;"><img src="images/lindsey.jpg" /></p>
+					<p>Lindsey joined the M.D. Laser Studio staff in 2006 as a Treatment Coordinator and soon became an invaluable member of the staff. A born organizer, Lindsey helps keep things running smoothly at the Laser Studio. Miss Miller earned her Teaching Degree from the University of North Carolina Charlotte. Like all of the staff at M.D. Laser Studio, Lindsey is continuing to broaden her education and knowledge base.</p><br /><br />
+				</div>
+				<div class="modal-footer">
+					<button href="#" class="btn primary exit">Close</button>
+				</div>
+			</div>
+			
+			<!-- Rita -->
+				<div id="modal-rita" class="modal hide fade">
+					<div class="modal-header">
+						<h1>Rita Aldridge <small>Marketing Director</small></h1>
+					</div>
+					<div class="modal-body">
+						<p style="float:right;"><img src="images/rita.jpg" /></p>
+						<p>Rita has been with M.D. Laser Studio almost since the beginning, helping to establish the image of the business to reflect the unique location and the personality of Dr. Castillo and his staff. With her natural talent in design, Rita is an experienced marketing professional. After graduating with a degree in Commercial Graphic Design from Southern Illinois University Carbondale, Rita worked in corporate marketing for several big names, including BOMI. While not busy designing an ad campaign or working in the Laser Studio, she tends to her husband, Dale, and her two beautiful daughters, Sierra and Erika.</p><br />
+					</div>
+					<div class="modal-footer">
+						<button href="#" class="btn primary exit">Close</button>
+					</div>
+				</div>
+
+	<!-- Sarah -->
+		<div id="modal-sarah" class="modal hide fade">
+			<div class="modal-header">
+				<h1>Sarah Stein <small>Treatment Coordinator</small></h1>
+			</div>
+			<div class="modal-body">
+				<p style="float:right;"><img src="images/sarah.jpg" /></p>
+				<p>Sarah was born and raised in Connecticut, but has lived all along the East Coast, including in South America! She was among the first to graduate Lake Norman High School, and went on to earn a degree from UNC in Charlotte. Sarah has been with M.D. Laser Studio in various capacities since August 2005. She works part-time with us, and full-time raising two beautiful children, Kirra and Eli alongside her husband, Daniel. Always a smiling face, Sarah is a key member of the team at M.D. Laser Studio.</p><br /><br />
+			</div>
+			<div class="modal-footer">
+				<button href="#" class="btn primary exit">Close</button>
+			</div>
+		</div>
 	</body>
 </html>
