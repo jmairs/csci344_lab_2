@@ -4,10 +4,75 @@
 		<meta charset="utf-8" />
 		<title>Bootstrap Lab</title>
 		<meta name="author" content="John Mairs, " />
+		<style>
+			.container > .content {
+				margin-top: 50px; /*Make content go BELOW topbar*/
+			}
+			.topbar .btn {
+				border: 0;
+			}
+		</style>
 		<link rel="stylesheet" href="bootstrap.css" />
 	</head>
 	<body>
 		<div class="topbar">
+			<div class="fill">
+				<div class="container">
+					<a class="brand" href="#">Lab 2</a>
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Staff</a></li>
+					</ul>
+					<form action="#" class="pull-right">
+						<input class="input-small" type="text" placeholder="Search" />
+						<button class="btn" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
 		</div>
+		
+		<div class="container">
+			<div class="content">
+				<div class="page-header">
+					<h1>Welcome! <small>This is nothing. &hearts;</small></h1>
+				</div>
+				<div class="row">
+					<div class="span10">
+						<h2>Primary</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non sagittis sapien. Mauris varius venenatis euismod. Suspendisse potenti. Vivamus fringilla eros vitae metus tempor placerat. Integer adipiscing, nunc non auctor dignissim, metus augue suscipit massa, ac eleifend velit ante quis purus. Vestibulum facilisis neque eu massa commodo sed mattis est aliquet. Morbi vel tortor vel quam blandit suscipit eu eget urna. Integer pretium quam vitae lacus scelerisque imperdiet. Nam luctus facilisis ipsum, quis vehicula metus faucibus a.</p>
+					</div>
+					<div class="span6">
+						<p><h2>Secondary</h2></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span16">
+						<h2>Meet Our Staff</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span3">
+						<img src="images/andy.jpg" alt="Dr. Alissandro Castillo" />
+					</div>
+					<div class="span3">
+						<img src="images/john.jpg" alt="John Mairs" />
+					</div>
+					<div class="span3">
+						<img src="images/lindsey.jpg" alt="Lindsey Miller" />
+					</div>
+					<div class="span3">
+						<img src="images/rita.jpg" alt="Rita Brodland" />
+					</div>
+					<div class="span3">
+						<img src="images/sarah.jpg" alt="Sarah Stein" />
+					</div>
+			</div>
+			
+			<footer>
+				<p>&copy; 2012, John / Avi</p>
+				<p>Images stolen from <a href="http://www.mdlaserstudio.com">M.D. Laser Studio</a></p>
+			</footer>
+		</div>	
 	</body>
 </html>
